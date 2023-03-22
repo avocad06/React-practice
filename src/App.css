@@ -1,0 +1,17 @@
+.CartItem {
+  display: flex;
+  height: 80px;
+}
+
+.CartItem .counter {
+  display: flex;
+  padding: 30px;
+}
+
+.CartItem .Item__img {
+  height: 100%;
+}
+
+.CartItem .Item__img img {
+  height: 100%;
+}
