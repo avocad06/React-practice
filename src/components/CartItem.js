@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
+import { CartContext } from "../App";
 
-function CartItem({ item, onUpdate, onRemove }) {
-
+function CartItem({ item }) {
+    const { onRemove, onUpdate } = useContext(CartContext)
     const [count, setCount] = useState(1);
 
     const handleClick = (e) => {

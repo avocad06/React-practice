@@ -1,5 +1,5 @@
 //hooks
-import { createContext, useContext, useEffect, useState } from 'react';
+import React, { useEffect, useReducer, useState } from 'react';
 import './App.css';
 
 // components
@@ -7,56 +7,105 @@ import CartItem from './components/CartItem';
 import Navbar from './components/Navbar';
 import data from './data';
 
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'REMOVE': {
+      return {
+        ...state,
+        items: state.items.filter(item => item.id !== action.id)
+      }
+    }
+    case 'CLEAR_CART': {
+      return { ...state, items: [] }
+    }
+    case 'UPDATE': {
+      let tempItems = state.items.map((item) => item.id === action.id ?
+        { ...item, amount: action.count } : item)
+      return { ...state, items: tempItems }
+    }
+    case 'GET_TOTAL': {
+      const { total, amount } = state.items.reduce((sumTotal, item) => {
+        const { price, amount } = item;
+        sumTotal.total += price * amount
+        sumTotal.amount += amount
+        return sumTotal
+      },
+        {
+          total: 0,
+          amount: 0
+        })
+      return { ...state, total: parseFloat(total.toFixed(2)), amount }
+    }
+    default:
+      return state
+  }
+}
+
+const initialState = {
+  items: data,
+  total: 0,
+  amount: 0
+}
+
+export const CartContext = React.createContext()
+
 function App() {
 
-  const CartContext = createContext(null);
+  const [state, dispatch] = useReducer(reducer, initialState)
 
   const [items, setItems] = useState(data);
   const [all, setAll] = useState(0);
   const [allPrice, setAllPrice] = useState(0);
 
   const onRemove = (id) => {
-    setItems(items.filter(item => item.id !== id))
+    dispatch({ type: 'REMOVE', id: id })
   }
 
   const onUpdate = (id, count) => {
-    setItems(
-      items.map(item => item.id === id
-        ? { ...item, amount: count } : item))
+    dispatch({ type: 'UPDATE', id, count })
   }
 
-  const handleClick = (e) => {
-    e.preventDefault();
-    setItems([])
+  const handleClick = () => {
+    dispatch({ type: 'CLEAR_CART' })
+  }
+
+  const getTotal = () => {
+    dispatch({ type: 'GET_TOTAL' })
   }
 
   useEffect(() => {
-    let result = items.reduce((sum, item) => sum + parseInt(item.amount), 0)
-    setAll(result)
-    console.log("변경", result, items)
-    let priceResult = items.reduce((sum, item) => sum + parseInt(item.amount) * +(item.price).toFixed(2), 0)
-    setAllPrice(priceResult.toFixed(2))
-  }, [items])
+    getTotal();
+  }, [state.items])
+
+  console.log(state)
 
   return (
-    <div className="App">
-      <Navbar items={items}
-        all={all} />
-      <button onClick={handleClick}>장바구니 비우기</button>
+    <CartContext.Provider value={
       {
-        items.length !== 0
-          ?
-          <>
-            {items.map(item => <CartItem key={item.id} item={item} onUpdate={onUpdate} onRemove={onRemove} />)}
-            <div>총 주문금액: {allPrice}</div>
-          </>
-          :
-          <>
-            <div>장바구니가 비었습니다.</div>
-            <div>총 주문금액: 0</div>
-          </>
+        ...state,
+        onRemove,
+        onUpdate
       }
-    </div >
+    }>
+      <Navbar />
+      <div className="App">
+        <button onClick={handleClick}>장바구니 비우기</button>
+        {
+          state.items.length !== 0
+            ?
+            <>
+              {state.items.map(item => <CartItem key={item.id} item={item} />)}
+              <div>총 주문금액:{state.total}</div>
+            </>
+            :
+            <>
+              <div>장바구니가 비었습니다.</div>
+              <div>총 주문금액: 0</div>
+            </>
+        }
+      </div >
+    </CartContext.Provider>
   );
 }
 
