@@ -12,6 +12,18 @@ function User() {
 
     const fetchUserInfo = async () => {
         const userInfoRes = await getUserInfo(userId)
+
+        if (userInfoRes === null) {
+            console.log("값이 없습니다.")
+            return
+        }
+
+        if (userInfoRes.message === 'Not Found') {
+            console.log("찾는 유저가 없습니다.")
+            setUserInfo(null)
+            return
+        }
+
         const {
             avatar_url,
             name,
@@ -41,9 +53,9 @@ function User() {
         fetchUserInfo();
     }, [])
 
+    if (userInfo?.length === 0) return (<div>Now Loading...</div>)
 
-
-    if (userInfo.length === 0) return (<div>now loading..</div>)
+    if (!userInfo) return (<div>no matches with {userId}</div>)
 
     return (
         <>

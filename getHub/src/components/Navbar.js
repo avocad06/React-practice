@@ -1,8 +1,12 @@
 import { useRef, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import { searchUsers } from "../api/search";
 
-
 function Navbar({ getUsers }) {
+
+    const navigate = useNavigate();
+
+    const { id } = useParams();
 
     const inputValueRef = useRef();
 
@@ -11,7 +15,14 @@ function Navbar({ getUsers }) {
     //handleSubmit
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (localState === null) { return }
+        if (localState.length === 0) {
+            if (id) {
+                navigate('/')
+            } else {
+                alert("Please Enter github name.")
+            }
+            return
+        }
         const searchResult = await searchUsers(inputValueRef.current.value)
 
         console.log(searchResult)
@@ -32,7 +43,8 @@ function Navbar({ getUsers }) {
                             e.target.value
                         )}
                         value={localState}
-                        ref={inputValueRef} />
+                        ref={inputValueRef}
+                        placeholder="search github name" />
                     <button>search</button>
                 </div>
             </form>

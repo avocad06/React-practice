@@ -1,16 +1,27 @@
+import { BASE_URL, KEY } from "./const"
+
 export const searchUsers = async (args) => {
     console.log(args)
-    const searchRes = await fetch(`https://api.github.com/search/users?q=${args}`, {
+    const searchRes = await fetch(`${BASE_URL}/search/users?q=${args}`, {
         method: 'GET',
+        headers: {
+            // Authorization: `Bearer ${KEY}`
+        },
     })
 
     return searchRes ? searchRes.json() : null
 }
 
 export const getUserInfo = async (args) => {
-    const userInfoRes = await fetch(`https://api.github.com/users/${args}`, {
+    const userInfoRes = await fetch(`${BASE_URL}/users/${args}`, {
         method: 'GET',
+        headers: {
+            // Authorization: `Bearer ${KEY}`
+        },
     })
 
-    return userInfoRes ? userInfoRes.json() : null
+    // console.log("HTTP통신 응답입니다.:", userInfoRes)
+
+
+    return userInfoRes.ok || userInfoRes.status === 404 ? userInfoRes.json() : null
 }
