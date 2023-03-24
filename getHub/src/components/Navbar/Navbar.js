@@ -1,6 +1,10 @@
+// hooks
 import { useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { searchUsers } from "../api/search";
+import { searchUsers } from "../../api/search";
+import { BiSearch } from 'react-icons/bi'
+
+import style from './Navbar.module.css'
 
 function Navbar({ getUsers }) {
 
@@ -33,9 +37,10 @@ function Navbar({ getUsers }) {
     }
 
     return (
-        <div className="Navbar">
+        <nav className="Navbar">
             <form onSubmit={handleSubmit}>
-                <div className="input-box">
+                <div className={style.inputBox}>
+                    <span><BiSearch /></span>
                     <input
                         type='text'
                         onChange={(e) => setLocalState(
@@ -45,11 +50,11 @@ function Navbar({ getUsers }) {
                         value={localState}
                         ref={inputValueRef}
                         placeholder="search github name" />
-                    <button>search</button>
+                    <button type="submit">search</button>
                 </div>
             </form>
 
-        </div>
+        </nav>
     )
 }
 

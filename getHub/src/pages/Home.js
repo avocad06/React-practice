@@ -2,8 +2,8 @@
 import { useState } from "react"
 
 // components
-import Main from "../components/Main"
-import Navbar from "../components/Navbar"
+import Main from "../components/Main/Main"
+import Navbar from "../components/Navbar/Navbar"
 
 function Home() {
     const [resultData, setResultData] = useState([])
