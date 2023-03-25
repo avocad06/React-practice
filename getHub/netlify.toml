@@ -1,0 +1,14 @@
+# site-1 netlify.toml
+[build]
+  command = "gatsby build"
+  functions = "functions"
+  publish = "public"
+
+[build.environment]
+  SITE1_SPECIFIC_FLAG = "true"
+
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+
+[[redirects]]
+/*    /index.html   200
