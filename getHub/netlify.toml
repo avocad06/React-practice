@@ -1,6 +1,6 @@
 # site-1 netlify.toml
 [build]
-  command = "gatsby build"
+  command = "CI= npm run build"
   functions = "functions"
   publish = "public"
 
