@@ -8,7 +8,7 @@ export const searchUsers = async (args) => {
         {
             method: 'GET',
             headers: {
-                // Authorization: `Bearer ${KEY}`
+                Authorization: `Bearer ${KEY}`
             },
         })
 
@@ -22,7 +22,7 @@ export const getUserInfo = async (args) => {
         {
             method: 'GET',
             headers: {
-                // Authorization: `Bearer ${KEY}`
+                Authorization: `Bearer ${KEY}`
             },
         })
 
