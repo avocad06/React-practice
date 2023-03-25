@@ -2,6 +2,3 @@
   command = "CI= npm run build"
   functions = "functions"
   publish = "public"
-
-[[plugins]]
-  package = "@netlify/plugin-lighthouse"
