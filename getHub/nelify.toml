@@ -1,7 +1,0 @@
-[build]
-  command = "CI= npm run build"
-  functions = "functions"
-  publish = "public"
-
-[build.environment]
-REACT_APP_GITHUB_KEY = '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'
