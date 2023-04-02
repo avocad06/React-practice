@@ -1,0 +1,14 @@
+.cardImg {
+    width: 100%;
+}
+
+.cardImg img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.title {
+    overflow: hidden;
+    word-break: break-word;
+    text-overflow: ellipsis;
+}

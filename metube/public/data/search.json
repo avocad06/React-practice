@@ -1,0 +1,862 @@
+{
+    "kind": "youtube#searchListResponse",
+    "etag": "uAZvAF2jlN1wP-mQYkE0nJ2amvM",
+    "nextPageToken": "CBkQAA",
+    "regionCode": "US",
+    "pageInfo": {
+        "totalResults": 234138,
+        "resultsPerPage": 25
+    },
+    "items": [
+        {
+            "kind": "youtube#searchResult",
+            "etag": "T_wmlpQuCcc92hcDLCNMmDE52OY",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "svQdzIpTYDo"
+            },
+            "snippet": {
+                "publishedAt": "2021-04-04T11:00:30Z",
+                "channelId": "UCp0BVuiPwDYT96pETGBjRag",
+                "title": "인생을 맡긴 남자친구가 좀비가 된다면? [웹툰 추천 | 살아남은 로맨스]",
+                "description": "인생을 맡긴 남자친구가 좀비가 된다면, 어떻게 살아남아야 할까요? 네이버 일요웹툰 신작 [살아남은 로멘스] 보러가기 ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/svQdzIpTYDo/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/svQdzIpTYDo/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/svQdzIpTYDo/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "코젤의 리뷰 여행기",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-04-04T11:00:30Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "SNiwvym_l1fZ5JhGnqGAEu5tQuo",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "5dMLwhgkLf8"
+            },
+            "snippet": {
+                "publishedAt": "2023-01-28T14:07:54Z",
+                "channelId": "UCe75-G_ZT8sb6uAMo-R7MLA",
+                "title": "【네이버 웹툰 ‘살아남은 로맨스(Surviving Romance)’ 77화 BGM】 MZ - 떠나지 마",
+                "description": "MZ - 떠나지 마 (웹툰 살아남은 로맨스 BGM) Webtoon 'Surviving Romance' BGM 안녕하세요. MZ 입니다. 이번 곡은 웹툰 77화에 ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/5dMLwhgkLf8/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/5dMLwhgkLf8/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/5dMLwhgkLf8/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "MZ",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-01-28T14:07:54Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "-0FumZi71WbFcue2l8gkS6fLHbs",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "DQgHLaKUklc"
+            },
+            "snippet": {
+                "publishedAt": "2021-11-21T12:25:29Z",
+                "channelId": "UCjx_jc73phqz-PTAr3vhL1g",
+                "title": "〔살아남은 로맨스 × 주인공〕웹툰 매드무비❦",
+                "description": "매드무비 설명❀ 〔웹툰〕 -살아남은 로맨스 (네이버 웹툰) ↳ http://naver.me/xOCp6Sji 〔노래〕 -주인공 (선미) ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/DQgHLaKUklc/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/DQgHLaKUklc/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/DQgHLaKUklc/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "단이",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-11-21T12:25:29Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "0elcbZ8KSXtD1YJl62Gm8bIqEGA",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "oPoglATNOXo"
+            },
+            "snippet": {
+                "publishedAt": "2021-06-19T14:06:35Z",
+                "channelId": "UCe75-G_ZT8sb6uAMo-R7MLA",
+                "title": "【네이버 웹툰 ‘살아남은 로맨스(Surviving Romance)’ 23화 BGM】 MZ - 떠나지 않는 것들에 대하여(feat.안예슬)",
+                "description": "MZ - 떠나지 않는 것들에 대하여(feat.안예슬) 웹툰 '살아남은 로맨스(Surviving Romance)' BGM 안녕하세요. MZ입니다. 이번 곡은 ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/oPoglATNOXo/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/oPoglATNOXo/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/oPoglATNOXo/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "MZ",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-06-19T14:06:35Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "_2yb0Pfoepf7ViPwxi1JrmPK9I0",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "aIGe-w0EQ-I"
+            },
+            "snippet": {
+                "publishedAt": "2022-09-24T13:01:55Z",
+                "channelId": "UCe75-G_ZT8sb6uAMo-R7MLA",
+                "title": "【네이버 웹툰 ‘살아남은 로맨스(Surviving Romance)’ 59화 BGM】 MZ - 또 다시, 시작",
+                "description": "MZ - 또 다시, 시작 (웹툰 살아남은 로맨스 BGM) Webtoon 'Surviving Romance' BGM 안녕하세요. MZ 입니다. 이번 곡은 웹툰 59화에 ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/aIGe-w0EQ-I/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/aIGe-w0EQ-I/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/aIGe-w0EQ-I/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "MZ",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-09-24T13:01:55Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "SZyKQn97-MBwbCTNd0ESPdGjr5k",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "S7yPDeCrBR0"
+            },
+            "snippet": {
+                "publishedAt": "2022-02-19T14:45:51Z",
+                "channelId": "UCe75-G_ZT8sb6uAMo-R7MLA",
+                "title": "【네이버 웹툰 ‘살아남은 로맨스(Surviving Romance)’ 57화 BGM】 MZ - 다시, 안녕",
+                "description": "MZ - 다시, 안녕 웹툰 '살아남은 로맨스(Surviving Romance)' BGM 안녕하세요. MZ입니다. 이번 곡은 【살아남은 로맨스】 57화에 ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/S7yPDeCrBR0/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/S7yPDeCrBR0/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/S7yPDeCrBR0/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "MZ",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-02-19T14:45:51Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "9EVqAdGIeMItvUtItCa5uOdm_CE",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "rJACFVq5v5g"
+            },
+            "snippet": {
+                "publishedAt": "2022-04-03T12:37:09Z",
+                "channelId": "UCKry44ci1qg85gZckls4ZXQ",
+                "title": "Eleven-IVE (보이스캐스팅) 살아남은 로맨스",
+                "description": "네이버 웹툰 살아남은 로맨스 보이스캐스팅 일레븐 -아이브 Eleven -IVE 네이버웹툰 '살아남은 로맨스' 보러가기⬇️ ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/rJACFVq5v5g/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/rJACFVq5v5g/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/rJACFVq5v5g/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "UNLUCK💙",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-04-03T12:37:09Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "JPmhsgiIkBxMupY1qIuJu0kR0lg",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "IopVZJgs4ds"
+            },
+            "snippet": {
+                "publishedAt": "2022-02-26T14:32:15Z",
+                "channelId": "UCe75-G_ZT8sb6uAMo-R7MLA",
+                "title": "【네이버 웹툰 ‘살아남은 로맨스(Surviving Romance)’ 시즌1 완결화 BGM】 MZ - 안녕",
+                "description": "MZ - 안녕 웹툰 '살아남은 로맨스(Surviving Romance)' BGM 안녕하세요. MZ입니다. 이번 곡은 【살아남은 로맨스】 시즌1 완결화에 ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/IopVZJgs4ds/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/IopVZJgs4ds/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/IopVZJgs4ds/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "MZ",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-02-26T14:32:15Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "qGrJ4hoF0MmO_qEzitYVtwXWI4E",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "R3o2V4jjPjw"
+            },
+            "snippet": {
+                "publishedAt": "2021-10-23T14:17:22Z",
+                "channelId": "UCe75-G_ZT8sb6uAMo-R7MLA",
+                "title": "【네이버 웹툰 ‘살아남은 로맨스(Surviving Romance)’ 41화 BGM】 MZ - 첫번째 안녕",
+                "description": "MZ - 첫번째 안녕 웹툰 '살아남은 로맨스(Surviving Romance)' BGM 안녕하세요. MZ입니다. 이번 곡은 【살아남은 로맨스】 41화에 ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/R3o2V4jjPjw/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/R3o2V4jjPjw/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/R3o2V4jjPjw/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "MZ",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-10-23T14:17:22Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "7p4GVn9TnZGBCpxgfzLU0OIJI08",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "L0m57LYh0U0"
+            },
+            "snippet": {
+                "publishedAt": "2023-01-18T09:00:15Z",
+                "channelId": "UCC2N3URuy8q5IbiWxDF0MIw",
+                "title": "🚫♥️살아남은 로맨스 3,4권 초판 언박싱 / 살남로 웹툰 단행본 개봉기♥️🚫 / naver webtoon//",
+                "description": "안녕하세요! {살아남은 로맨스 3,4권}개봉기 영상을 찍어보았습니다. 영상봐주신 모든분들 감사드리고 즐거운 하루 되세요:) ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/L0m57LYh0U0/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/L0m57LYh0U0/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/L0m57LYh0U0/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "하루 • One Day",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-01-18T09:00:15Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "lrDaHmaU8ZmLYHQ-v_Aa0qLsOxc",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "FoyMIxomdY4"
+            },
+            "snippet": {
+                "publishedAt": "2021-02-27T14:04:48Z",
+                "channelId": "UCe75-G_ZT8sb6uAMo-R7MLA",
+                "title": "【네이버 웹툰 &#39;살아남은 로맨스(Surviving Romance)&#39; 7화 BGM】MZ - 개전",
+                "description": "MZ - 개전 웹툰 '살아남은 로맨스(Surviving Romance)' BGM 안녕하세요. MZ입니다. 이번 곡은 【살아남은 로맨스】 7화에 삽입된 ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/FoyMIxomdY4/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/FoyMIxomdY4/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/FoyMIxomdY4/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "MZ",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-02-27T14:04:48Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "MRuKsWLmr10S3FuDTiuwXq0bxe8",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "_n8-RGF-ALE"
+            },
+            "snippet": {
+                "publishedAt": "2022-12-16T11:00:35Z",
+                "channelId": "UCrzroRd1ki4tQDA4CHFOWkw",
+                "title": "살아남은 로맨스 눈 움직이는 박자편집 #shorts #박자편집 #네이버웹툰 #살아남은로맨스",
+                "description": "",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/_n8-RGF-ALE/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/_n8-RGF-ALE/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/_n8-RGF-ALE/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "빠앙",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-12-16T11:00:35Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "ULAn27LK_Tt_DYAm8S8IdNtTrCM",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "BT0eUepjG4o"
+            },
+            "snippet": {
+                "publishedAt": "2022-08-21T12:30:08Z",
+                "channelId": "UC6VD2FSCk9FuxWNdn7kHKKA",
+                "title": "[ 매드무비 ] 살아남은 로맨스 × The Last Of the Real ones",
+                "description": "노래 듣기 -https://youtu.be/HWCJI7mCHZE 웹툰 보러가기 -http://naver.me/xOCp6Sji #웹툰매드무비 #살아남은_로맨스 ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/BT0eUepjG4o/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/BT0eUepjG4o/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/BT0eUepjG4o/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "이내!",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-08-21T12:30:08Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "pvFfXCiKcJJg7o99QrB3qz64n5c",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "JmOBLZViRoQ"
+            },
+            "snippet": {
+                "publishedAt": "2022-02-27T04:23:55Z",
+                "channelId": "UCCiFsmBXWXoDxKwAzW3sY-g",
+                "title": "살아남은 로맨스• 반 총 생존자들 • 사망자•돌아와ㅠㅠㅠ",
+                "description": "",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/JmOBLZViRoQ/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/JmOBLZViRoQ/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/JmOBLZViRoQ/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "수련[유접]",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-02-27T04:23:55Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "qfVusjNdMzWHE1ZYkYMvVb_NtOc",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "5mWrO8JrxOI"
+            },
+            "snippet": {
+                "publishedAt": "2021-05-22T14:17:38Z",
+                "channelId": "UCe75-G_ZT8sb6uAMo-R7MLA",
+                "title": "【네이버 웹툰 &#39;살아남은 로맨스(Surviving Romance)&#39; 19화 BGM】 MZ - 불협화음",
+                "description": "MZ - 불협화음 웹툰 '살아남은 로맨스(Surviving Romance)' BGM 안녕하세요. MZ입니다. 이번 곡은 【살아남은 로맨스】 19화에 ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/5mWrO8JrxOI/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/5mWrO8JrxOI/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/5mWrO8JrxOI/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "MZ",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-05-22T14:17:38Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "WSjeJBH3j3jY8x1Z7F7G0zSpyfg",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "HuxJVWaIrp0"
+            },
+            "snippet": {
+                "publishedAt": "2022-12-19T08:00:56Z",
+                "channelId": "UCC2N3URuy8q5IbiWxDF0MIw",
+                "title": "📱🩸살아남은 로맨스 1,2권 초판 언박싱 / 살남로 웹툰 단행본 개봉기🩸📱/naver webtoon//",
+                "description": "안녕하세요! {살아남은 로맨스 1,2권 초판}개봉기 영상을 찍어보았습니다. 영상봐주신 모든분들 감사드리고 즐거운 하루 되세요:) ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/HuxJVWaIrp0/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/HuxJVWaIrp0/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/HuxJVWaIrp0/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "하루 • One Day",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-12-19T08:00:56Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "foX2LXicaG_tV1fU6omh8lyRbV8",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "xNz5mwgpbdk"
+            },
+            "snippet": {
+                "publishedAt": "2021-12-01T15:54:37Z",
+                "channelId": "UC5Gn-lteDfjaGbwgHLMMyTA",
+                "title": "분명 로맨스 소설이었는데, 눈 깜빡하니 ○○물?! | 살아남은 로맨스 | 웹툰 소개 편",
+                "description": "15세 이상 권장 웹툰입니다. ※ 웹툰 초반부의 내용이 언급됩니다. (민감하신 분들 약 스포 주의) ※ 인트로의 핥는 소리 조심! 이번에 ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/xNz5mwgpbdk/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/xNz5mwgpbdk/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/xNz5mwgpbdk/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "방구석 피터팬TV",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-12-01T15:54:37Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "VKBI5R1CwnshPi8Q2NH2X15HUwk",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "jvikRTQRdfY"
+            },
+            "snippet": {
+                "publishedAt": "2022-09-03T12:45:23Z",
+                "channelId": "UCe3bFWWI2FATHOLxFrCZagQ",
+                "title": "살아남은 로맨스 너무 재밌어ㅓ...",
+                "description": "",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/jvikRTQRdfY/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/jvikRTQRdfY/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/jvikRTQRdfY/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "영빈",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-09-03T12:45:23Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "3LVZy6E2uHhk2oFchxrxJpra51g",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "7RswQ6BTxyg"
+            },
+            "snippet": {
+                "publishedAt": "2021-06-24T09:36:14Z",
+                "channelId": "UCvUWhBPL0UFUMA4EFiUuI3w",
+                "title": "살아남은 로맨스 넷플릭스로 만들어지다?!",
+                "description": "틱톡커 로판사랑녀입니당! 구독과 좋아요 눌러주세요!",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/7RswQ6BTxyg/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/7RswQ6BTxyg/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/7RswQ6BTxyg/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "금나와라 뚝딱",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-06-24T09:36:14Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "mv3w6ONOqs83eWbSsKYLvFAICKw",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "3hyzUirS3_Q"
+            },
+            "snippet": {
+                "publishedAt": "2023-01-14T13:59:50Z",
+                "channelId": "UCe75-G_ZT8sb6uAMo-R7MLA",
+                "title": "【네이버 웹툰 ‘살아남은 로맨스(Surviving Romance)’ 75화 BGM】 MZ - 귀환",
+                "description": "MZ - 귀환 (웹툰 살아남은 로맨스 BGM) Webtoon 'Surviving Romance' BGM 안녕하세요. MZ 입니다. 이번 곡은 웹툰 75화에 삽입된 ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/3hyzUirS3_Q/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/3hyzUirS3_Q/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/3hyzUirS3_Q/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "MZ",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-01-14T13:59:50Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "686bntr-FtqnN9xOWoT5pi4awzg",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "4M1_t9YzN1o"
+            },
+            "snippet": {
+                "publishedAt": "2023-01-24T07:58:04Z",
+                "channelId": "UCeZrB0B9ihypFImCaIl5WZg",
+                "title": "살아남은 로맨스 - 은채린      (Ps- 손을 갈아 만든.. )    #shorts             @H_GG7",
+                "description": "",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/4M1_t9YzN1o/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/4M1_t9YzN1o/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/4M1_t9YzN1o/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "[]  아람_ARAM",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-01-24T07:58:04Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "FqfIQyGOS3vk281kozmUE3Hm-A0",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "iMcCbobTycg"
+            },
+            "snippet": {
+                "publishedAt": "2021-12-18T14:12:44Z",
+                "channelId": "UCe75-G_ZT8sb6uAMo-R7MLA",
+                "title": "【네이버 웹툰 ‘살아남은 로맨스(Surviving Romance)’ 49화 BGM】 MZ - 기적",
+                "description": "MZ - 기적 웹툰 '살아남은 로맨스(Surviving Romance)' BGM 안녕하세요. MZ입니다. 이번 곡은 【살아남은 로맨스】 49화에 삽입된 ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/iMcCbobTycg/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/iMcCbobTycg/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/iMcCbobTycg/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "MZ",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-12-18T14:12:44Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "sY8XB8rZWccYKRArPVYDQDlLR28",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "tJmQe8vJtHM"
+            },
+            "snippet": {
+                "publishedAt": "2022-11-13T13:12:14Z",
+                "channelId": "UCKry44ci1qg85gZckls4ZXQ",
+                "title": "Antifragileㅡ레세라핌ㅣ보이스캐스팅ㅣ살아남은 로맨스",
+                "description": "Antifragile MV  ⏬ https://youtu.be/pyf8cbqyfPs #antifragile #lesserafim #보이스캐스팅 #네이버웹툰 #voicecasting #webtoon ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/tJmQe8vJtHM/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/tJmQe8vJtHM/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/tJmQe8vJtHM/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "UNLUCK💙",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-11-13T13:12:14Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "-qOESXdAi9eUpczux1EKyw_5AwQ",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "lEjXpHU6PfE"
+            },
+            "snippet": {
+                "publishedAt": "2022-01-18T09:34:26Z",
+                "channelId": "UC-Yx9hJh0FvHNx7sovHhl9A",
+                "title": "살아남은 로맨스 / 송리나/ 하민우",
+                "description": "",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/lEjXpHU6PfE/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/lEjXpHU6PfE/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/lEjXpHU6PfE/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "이현",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-01-18T09:34:26Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "yX6XJub0sSqARBarK0wWnbQwL0c",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "X6dX6U8jvGk"
+            },
+            "snippet": {
+                "publishedAt": "2021-01-16T13:07:02Z",
+                "channelId": "UCe75-G_ZT8sb6uAMo-R7MLA",
+                "title": "【네이버 웹툰 &#39;살아남은 로맨스(Surviving Romance)’ 1화 BGM】MZ - start!",
+                "description": "MZ - Start! 웹툰 '살아남은 로맨스(Surviving Romance)' BGM 안녕하세요. MZ입니다. 이번 곡은 【살아남은 로맨스】 1화에 삽입된 ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/X6dX6U8jvGk/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/X6dX6U8jvGk/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/X6dX6U8jvGk/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "MZ",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-01-16T13:07:02Z"
+            }
+        }
+    ]
+}
