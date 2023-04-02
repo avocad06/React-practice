@@ -1,7 +1,7 @@
 // hooks
 import { useEffect } from "react"
 import { useState } from "react"
-import { Link, useParams } from "react-router-dom"
+import { Link, useParams, useLocation } from "react-router-dom"
 
 // components
 import Channel from "../components/Channel"
@@ -11,7 +11,10 @@ import { key } from "../api/const"
 
 function VideoDetail() {
 
-    const [video, setVideo] = useState({})
+    const { video } = useLocation().state;
+    console.log(useLocation())
+
+    // const [video, setVideo] = useState({})
 
     const { videoId } = useParams()
 
@@ -37,13 +40,13 @@ function VideoDetail() {
             try {
                 const detailInfo = await getDetailRes.json()
                 console.log(detailInfo.items[0])
-                setVideo(detailInfo.items[0])
+                // setVideo(detailInfo.items[0])
             }
             catch (err) {
                 console.log(
                     err, "에러발생"
                 )
-                setVideo({})
+                // setVideo({})
             }
 
         }
@@ -63,7 +66,7 @@ function VideoDetail() {
 
     useEffect(() => {
         console.log(videoId)
-        getVideoDetail()
+        // getVideoDetail()
     }, [videoId])
 
     if (!video) return <div>data를 가지고 오는 중입니다...</div>
@@ -77,7 +80,11 @@ function VideoDetail() {
         <div className='VideoDetails'>
             <h2>{videoId}</h2>
             <section>
-                <div dangerouslySetInnerHTML={{ __html: player }} />
+                {/* <div dangerouslySetInnerHTML={{ __html: player }} />
+                 */}
+                <iframe id="player" type="text/html" width="640" height="390"
+                    src={`http://www.youtube.com/embed/${videoId}?enablejsapi=1&origin=http://example.com`}
+                    frameborder="0"></iframe>
                 <h3>{title}</h3>
                 {channelId && <Channel id={channelId} />}
                 <span>{description}</span>

@@ -7,7 +7,7 @@ function VideoCard({ video }) {
 
     const { id, date, title, thumbnail, channel } = video
     return (
-        <Link to={`/videos/watch/${keyword ? video.id.videoId || id : video.id}`}>
+        <Link to={`/videos/watch/${keyword ? video.id.videoId || id : video.id}`} state={{ 'video': video }}>
             <li>
                 <div className={style.cardImg}>
                     <img src={thumbnail || video.snippet?.thumbnails.default.url} alt="thumbnail" />
