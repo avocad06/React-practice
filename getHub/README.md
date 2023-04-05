@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+![gethub-asset](assets/gethub-asset.gif)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+# 페이지
 
-### `npm start`
+- 📄 `Home.js` (path: `/`)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  검색 결과 값을 저장하고 있는 변수 `resultData` state를 관리하고, 검색 시의 화면을 출력하는 페이지. `Main.js` 컴포넌트를 출력한다.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 📄 `User.js`(path: `/users/:id`)
 
-### `npm test`
+  유저의 상세 페이지를 출력하는 페이지. 페이지가 렌더링될 때, 유저의 `github name`을 기반으로 상세 정보를 가져오는 api를 요청하여 응답 값으로 출력한다.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# 컴포넌트 구조
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- 📁 `Main`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  - 🧩 `Main.js`
 
-### `npm run eject`
+    `Home` page의 `<main>`섹션을 담당하며, 출력할 결과가 있는지 없는지에 따라 다른 화면을 표시하고, 값이 있다면, `MainItem.js`에 출력할 결과 배열을 순회하며 아이템의 값을 prop으로 전달
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  - 🧩 `MainItem.js`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    > 검색 결과 출력시 재사용되는 카드 컴포넌트들이므로 따로 분리
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    부모 컴포넌트인 `Main.js`로부터 prop으로 받아온 아이템의 프로퍼티 값을 JSX Element와 함께 출력하고, 아이템의 상세 페이지로 이동할 수 있도록 함
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- 📁 `Navbar`
 
-## Learn More
+  - 🧩 `Navbar.js`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    `Home` page와 `User` page 모두에 출력되는 컴포넌트. 검색어 입력 form에서 입력된 값에 대한 유효성을 검사하고, 통과될 경우 api 요청을 하여 그 응답을 `Home` page가 관리하고 있는 `resultData`의 값으로 갱신하는 `getUsers` 함수가 호출됨.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# 이슈
 
-### Analyzing the Bundle Size
+## 에러 핸들링
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. api 요청 횟수 제한 ❓
 
-### Making a Progressive Web App
+   횟수 제한으로 요청이 실패했을 때, 어떻게 에러를 처리하는 것이 좋을까?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   http response가 올 때 `status`를 같이 전달해주는데, 200~ 의 상태코드가 아니면 해당 프로퍼티는 `status: false`의 값으로 전달된다. 이를 이용해 데이터를 fetch하는 함수의 결과 값으로 `example.ok ? true: null` 을 전달하여 http 요청이 실패한 경우를 처리할 수 있지만, 상태코드별로 에러 핸들링을 해야 할까?
 
-### Advanced Configuration
+2. 빈 문자열로 요청할 경우
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+   빈 문자열일 경우 http 요청에 실패하기에 입력 값을 받을 때, 빈 문자열 혹은 `null` 값으로 api를 요청하지 않도록 예외처리를 해야 한다.
 
-### Deployment
+3. 없는 사용자를 요청할 경우
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   역시 http 요청이 실패하고, 404에러를 띄울 때 이때 json으로 parse해보면 `Not Found` 메시지가 출력된다. 이에 대한 상태코드를 읽어 예외 처리를 했다.
