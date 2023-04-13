@@ -16,16 +16,42 @@ function Navbar({ getUsers }) {
 
     const [localState, setLocalState] = useState('')
 
+    // 타이머 선언
+    const [timer, setTimer] = useState(null);
+
+    const handleChange = async (e) => {
+
+        setLocalState((prev) =>
+            // inputValueRef.current.value
+            e.target.value
+        )
+        console.log('input값과 localState는 다릅니다.',
+            'inputValue:', inputValueRef.current.value,
+            'localState:', localState)
+
+        // 이전 timer가 존재한다면,
+        if (timer) clearTimeout(timer)
+
+        const newTimer = setTimeout(async () => {
+            try {
+                console.log("요청했습니다.")
+                localState && await handleSubmit(e);
+            } catch (e) { console.log('error', e) }
+        }, 800)
+        setTimer(newTimer)
+    }
+
     //handleSubmit
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (localState.length === 0) {
+            console.log(inputValueRef.current.value, "입력값이 없습니다.")
             if (id) {
                 navigate('/')
             } else {
                 alert("Please Enter github name.")
             }
-            return
+            return getUsers([])
         }
         const searchResult = await searchUsers(inputValueRef.current.value)
 
@@ -36,6 +62,7 @@ function Navbar({ getUsers }) {
         getUsers(searchResult?.items)
     }
 
+
     return (
         <nav className="Navbar">
             <form onSubmit={handleSubmit}>
@@ -43,10 +70,7 @@ function Navbar({ getUsers }) {
                     <span><BiSearch /></span>
                     <input
                         type='text'
-                        onChange={(e) => setLocalState(
-                            // inputValueRef.current.value
-                            e.target.value
-                        )}
+                        onChange={handleChange}
                         value={localState}
                         ref={inputValueRef}
                         placeholder="search github name" />
