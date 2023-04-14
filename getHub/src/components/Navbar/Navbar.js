@@ -21,30 +21,34 @@ function Navbar({ getUsers }) {
 
     const handleChange = async (e) => {
 
-        setLocalState((prev) =>
+        setLocalState(() => {
+            const newState = e.target.value
+            console.log("새로 바뀔 값입니다.", newState)
+
+            // 이전 timer가 존재한다면,
+            if (timer) clearTimeout(timer)
+
+            const newTimer = setTimeout(async () => {
+                try {
+                    console.log("요청했습니다.")
+                    await handleSubmit(null, newState);
+                } catch (e) { console.log('error', e) }
+            }, 600)
+            setTimer(newTimer)
+            return newState;
+        }
             // inputValueRef.current.value
-            e.target.value
+            // e.target.value
         )
         console.log('input값과 localState는 다릅니다.',
             'inputValue:', inputValueRef.current.value,
             'localState:', localState)
-
-        // 이전 timer가 존재한다면,
-        if (timer) clearTimeout(timer)
-
-        const newTimer = setTimeout(async () => {
-            try {
-                console.log("요청했습니다.")
-                localState && await handleSubmit(e);
-            } catch (e) { console.log('error', e) }
-        }, 800)
-        setTimer(newTimer)
     }
 
     //handleSubmit
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        if (localState.length === 0) {
+    const handleSubmit = async (e, state) => {
+        e?.preventDefault();
+        if (state?.length === 0) {
             console.log(inputValueRef.current.value, "입력값이 없습니다.")
             if (id) {
                 navigate('/')
@@ -53,7 +57,7 @@ function Navbar({ getUsers }) {
             }
             return getUsers([])
         }
-        const searchResult = await searchUsers(inputValueRef.current.value)
+        const searchResult = await searchUsers(state ? state : localState)
 
         console.log(searchResult)
         if (searchResult?.items.length < 1) {
