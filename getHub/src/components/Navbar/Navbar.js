@@ -30,7 +30,6 @@ function Navbar({ getUsers }) {
 
             const newTimer = setTimeout(async () => {
                 try {
-                    console.log("요청했습니다.")
                     await handleSubmit(null, newState);
                 } catch (e) { console.log('error', e) }
             }, 600)
@@ -48,21 +47,28 @@ function Navbar({ getUsers }) {
     //handleSubmit
     const handleSubmit = async (e, state) => {
         e?.preventDefault();
-        if (state?.length === 0) {
-            console.log(inputValueRef.current.value, "입력값이 없습니다.")
-            if (id) {
-                navigate('/')
-            } else {
-                alert("Please Enter github name.")
-            }
-            return getUsers([])
-        }
-        const searchResult = await searchUsers(state ? state : localState)
+        console.log("state는 이걸로 들어왔어요", state)
 
+
+        const searchWord = (e ? localState : state).trim()
+        console.log("이걸로 요청 보낼 거예요", searchWord)
+        if (searchWord === '') {
+            if (id) {
+                return navigate('/')
+            } else {
+                e && alert("Please Enter github name.")
+                e && setLocalState('')
+                return getUsers([])
+            }
+        }
+        const searchResult = await searchUsers(searchWord)
         console.log(searchResult)
+
         if (searchResult?.items.length < 1) {
             alert(`Not Found User: ${localState}`)
+            return setLocalState('')
         }
+
         getUsers(searchResult?.items)
     }
 
