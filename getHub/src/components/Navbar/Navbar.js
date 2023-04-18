@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { searchUsers } from "../../api/search";
 import { BiSearch } from 'react-icons/bi'
+import { useQuery } from "@tanstack/react-query";
 
 import style from './Navbar.module.css'
 
@@ -15,6 +16,20 @@ function Navbar({ getUsers }) {
     const inputValueRef = useRef();
 
     const [localState, setLocalState] = useState('')
+
+    const searchWordRef = useRef(null);
+
+    const { refetch, data: searchResult } = useQuery(
+        {
+            queryKey: ['search', searchWordRef.current],
+            queryFn: async () => {
+                const result = await searchUsers(searchWordRef.current)
+                return result;
+            },
+            enabled: false,
+            refetchOnWindowFocus: false,
+            staleTime: 50000
+        })
 
     // 타이머 선언
     const [timer, setTimer] = useState(null);
@@ -49,7 +64,6 @@ function Navbar({ getUsers }) {
         e?.preventDefault();
         console.log("state는 이걸로 들어왔어요", state)
 
-
         const searchWord = (e ? localState : state).trim()
         console.log("이걸로 요청 보낼 거예요", searchWord)
         if (searchWord === '') {
@@ -61,7 +75,8 @@ function Navbar({ getUsers }) {
                 return getUsers([])
             }
         }
-        const searchResult = await searchUsers(searchWord)
+        searchWordRef.current = searchWord
+        refetch(searchWord)
         console.log(searchResult)
 
         if (searchResult?.items.length < 1) {
@@ -69,12 +84,12 @@ function Navbar({ getUsers }) {
             return setLocalState('')
         }
 
-        getUsers(searchResult?.items)
+        getUsers(searchResult ? searchResult.items : [])
     }
 
 
     return (
-        <nav className="Navbar">
+        <nav className="Navbar" >
             <form onSubmit={handleSubmit}>
                 <div className={style.inputBox}>
                     <span><BiSearch /></span>
@@ -88,7 +103,7 @@ function Navbar({ getUsers }) {
                 </div>
             </form>
 
-        </nav>
+        </nav >
     )
 }
 
