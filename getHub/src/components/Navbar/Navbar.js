@@ -19,16 +19,17 @@ function Navbar({ getUsers }) {
 
     const searchWordRef = useRef(null);
 
-    const { refetch, data: searchResult } = useQuery(
+    const { isLoading, refetch, data: searchResult } = useQuery(
         {
             queryKey: ['search', searchWordRef.current],
             queryFn: async () => {
+                console.log("이걸로 data fetch 할 거예요", searchWordRef.current)
                 const result = await searchUsers(searchWordRef.current)
                 return result;
             },
-            enabled: false,
+            enabled: true,
             refetchOnWindowFocus: false,
-            staleTime: 50000
+            staleTime: 1000 * 60 * 3
         })
 
     // 타이머 선언
@@ -59,13 +60,17 @@ function Navbar({ getUsers }) {
             'localState:', localState)
     }
 
+    if (isLoading) {
+        return console.log("로딩 중")
+    }
+
     //handleSubmit
     const handleSubmit = async (e, state) => {
         e?.preventDefault();
-        console.log("state는 이걸로 들어왔어요", state)
 
+
+        // 검색여 유효성 검사
         const searchWord = (e ? localState : state).trim()
-        console.log("이걸로 요청 보낼 거예요", searchWord)
         if (searchWord === '') {
             if (id) {
                 return navigate('/')
@@ -75,12 +80,14 @@ function Navbar({ getUsers }) {
                 return getUsers([])
             }
         }
+
         searchWordRef.current = searchWord
-        refetch(searchWord)
-        console.log(searchResult)
+        // await refetch(searchWord)
+
+        console.log("검색결과입니다.", searchResult)
 
         if (searchResult?.items.length < 1) {
-            alert(`Not Found User: ${localState}`)
+            alert(`Not Found User: ${searchWord}`)
             return setLocalState('')
         }
 
