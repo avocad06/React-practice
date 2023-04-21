@@ -1,8 +1,9 @@
 // hooks
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { searchUsers } from "../../api/search";
 import { BiSearch } from 'react-icons/bi'
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 
 import style from './Navbar.module.css'
 
@@ -12,9 +13,34 @@ function Navbar({ getUsers }) {
 
     const { id } = useParams();
 
-    const inputValueRef = useRef();
-
     const [localState, setLocalState] = useState('')
+
+    const [searchWord, setSearchWord] = useState('')
+
+    const queryClient = useQueryClient()
+
+    const { isLoading, data: searchResult } = useQuery(
+        {
+            queryKey: ['search', searchWord],
+            queryFn: async () => {
+                console.log("이걸로 data fetch 할 거예요", searchWord)
+                const result = await searchUsers(searchWord)
+                return result;
+            },
+            refetchOnWindowFocus: false,
+            enabled: true,
+            staleTime: 1000 * 60 * 3,
+            // new Data를 잘 받아왔을 때 실행되는 함수
+            onSuccess: (data) => {
+                console.log(data)
+                if (data?.items.length < 1) {
+                    alert(`Not Found User: ${searchWord}`)
+                    getUsers([])
+                    return setLocalState('')
+                }
+                getUsers(data ? data.items : [])
+            }
+        })
 
     // 타이머 선언
     const [timer, setTimer] = useState(null);
@@ -23,7 +49,7 @@ function Navbar({ getUsers }) {
 
         setLocalState(() => {
             const newState = e.target.value
-            console.log("새로 바뀔 값입니다.", newState)
+            // console.log("새로 바뀔 값입니다.", newState)
 
             // 이전 timer가 존재한다면,
             if (timer) clearTimeout(timer)
@@ -36,23 +62,16 @@ function Navbar({ getUsers }) {
             setTimer(newTimer)
             return newState;
         }
-            // inputValueRef.current.value
-            // e.target.value
         )
-        console.log('input값과 localState는 다릅니다.',
-            'inputValue:', inputValueRef.current.value,
-            'localState:', localState)
     }
 
     //handleSubmit
     const handleSubmit = async (e, state) => {
         e?.preventDefault();
-        console.log("state는 이걸로 들어왔어요", state)
 
-
-        const searchWord = (e ? localState : state).trim()
-        console.log("이걸로 요청 보낼 거예요", searchWord)
-        if (searchWord === '') {
+        // 검색여 유효성 검사
+        const search = (e ? localState : state).trim()
+        if (search === '') {
             if (id) {
                 return navigate('/')
             } else {
@@ -61,20 +80,22 @@ function Navbar({ getUsers }) {
                 return getUsers([])
             }
         }
-        const searchResult = await searchUsers(searchWord)
-        console.log(searchResult)
 
-        if (searchResult?.items.length < 1) {
-            alert(`Not Found User: ${localState}`)
-            return setLocalState('')
+        // searchWord가 변경될 때 = useQuery훅의 실행
+        setSearchWord(() => {
+            const newSearch = search
+            return newSearch
+        })
+        if (!isLoading) {
+            console.log("처음 검색하는 단어가 아닙니다. 캐시된 데이터를 가져옵니다.")
+            const cachedData = queryClient.getQueryData(['search', search])
+            console.log(cachedData)
+            return cachedData && getUsers(cachedData.items)
         }
-
-        getUsers(searchResult?.items)
     }
 
-
     return (
-        <nav className="Navbar">
+        <nav className="Navbar" >
             <form onSubmit={handleSubmit}>
                 <div className={style.inputBox}>
                     <span><BiSearch /></span>
@@ -82,13 +103,12 @@ function Navbar({ getUsers }) {
                         type='text'
                         onChange={handleChange}
                         value={localState}
-                        ref={inputValueRef}
                         placeholder="search github name" />
                     <button type="submit">search</button>
                 </div>
             </form>
 
-        </nav>
+        </nav >
     )
 }
 
