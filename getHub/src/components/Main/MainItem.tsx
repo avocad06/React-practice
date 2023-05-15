@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom"
 import { BsArrowUpRight } from 'react-icons/bs'
+import { Item } from "../../types/searchData"
 
 import style from './Main.module.css'
 
-function MainItem({ login, avatar_url: avatar }) {
+interface MainItemProps extends Item {
+}
+
+function MainItem({ login, avatar_url: avatar }: MainItemProps) {
     return (
         <Link to={`/users/${login}`}>
             <div className={style.card}>
