@@ -1,6 +1,6 @@
 import { BASE_URL, KEY } from "./const"
 import { searchResData, Item } from "../types/searchData"
-
+import {userResData} from '../types/userData'
 
 export const searchUsers = async (args: string): Promise<Item[] | null> => {
     console.log(args)
@@ -20,7 +20,7 @@ export const searchUsers = async (args: string): Promise<Item[] | null> => {
     return apiRes ? apiRes.items : null
 }
 
-export const getUserInfo = async (args: string) => {
+export const getUserInfo = async (args: string): Promise<userResData | null> => {
     const userInfoRes = await fetch(
         `${BASE_URL}/users/${args}`,
         // '/data/userData.json',
@@ -31,7 +31,7 @@ export const getUserInfo = async (args: string) => {
             },
         })
 
-    // console.log("HTTP통신 응답입니다.:", userInfoRes)
+    console.log("HTTP통신 응답입니다.:", userInfoRes)
 
 
     return userInfoRes.ok || userInfoRes.status === 404 ? userInfoRes.json() : null

@@ -18,8 +18,8 @@ function Main({ resultData }: MainProps) {
                 (
                 <ul>
                     {resultData.map((data: Item) => 
-                    <li>
-                        <MainItem key={data.id} {...data} />
+                    <li  key={data.id} >
+                        <MainItem {...data} />
                     </li>)}
                 </ul>)
                 }

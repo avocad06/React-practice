@@ -9,7 +9,7 @@ import { searchResultArray } from "../../pages/Home";
 import style from './Navbar.module.css'
 
 interface NavbarProps {
-    getUsers: (result: searchResultArray) => void
+    getUsers?: (result: searchResultArray) => void
 }
 
 const Navbar:React.FC<NavbarProps> = ({ getUsers }) => {
@@ -41,10 +41,10 @@ const Navbar:React.FC<NavbarProps> = ({ getUsers }) => {
                 // 새로 받아온 값의 결과 값 개수가 없다면
                 if (data?.length < 1) {
                     alert(`Not Found User: ${searchWord}`)
-                    getUsers([])
+                    getUsers && getUsers([])
                     return setLocalState('')
                 }
-                getUsers(data ? data : [])
+                getUsers && getUsers(data ? data : [])
             }
         })
 
@@ -85,7 +85,7 @@ const Navbar:React.FC<NavbarProps> = ({ getUsers }) => {
                 // submit 이벤트 제출 시의 공백만 처리
                 e && alert("Please Enter github name.")
                 e && setLocalState('')
-                return getUsers([])
+                return getUsers && getUsers([])
             }
         }
 
@@ -97,7 +97,7 @@ const Navbar:React.FC<NavbarProps> = ({ getUsers }) => {
         if (!isLoading) {
             const cachedData:searchResultArray|undefined = queryClient.getQueryData(['search', search])
             console.log(cachedData)
-            return cachedData && getUsers(cachedData)
+            return cachedData && getUsers && getUsers(cachedData)
         }
     }
 
